@@ -11,8 +11,9 @@
         placeholder='Search...'
         class='form-input'
         v-model='search.query'
+        @change='toggleSearchBtn'
       />
-      <button class='form-input' :disabled="this.search.query.length >= 1 ? disabled : ''">
+      <button class='form-input' :disabled="!search.query">
         <img src='../assets/search.png' class='form-input'/>
       </button>
     </form>
@@ -26,13 +27,21 @@ export default {
     return {
       search: {
         query: '',
-      }
+      },
+      searchBtn: {
+        disabled: true,
+      },
     }
   },
   methods: {
     handleSubmit() {
       this.$emit('search:query', this.search.query)
       this.search.query = '';
+    },
+    toggleSearchBtn() {
+      if (this.search.query.length >= 1) {
+        this.searchBtn.disabled = !this.searchBtn.disabled
+      }
     }
   }
 }
