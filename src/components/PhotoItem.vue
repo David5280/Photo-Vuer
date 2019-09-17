@@ -20,9 +20,14 @@ export default {
   height: 500px;
   margin: 25px;
   object-fit: cover;
-  min-width: 300px;
   max-width: 650px;
   box-shadow: 1px 1px 10px;
+  }
+
+  @media (max-width: 700px) {
+    .single-image {
+      width: 80%;
+    }
   }
 
 </style>
