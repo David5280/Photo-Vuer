@@ -10,8 +10,8 @@
         type='text' 
         placeholder='Search...'
         class='form-input'
+        id='text-input'
         v-model='search.query'
-        @change='toggleSearchBtn'
       />
       <button class='form-input' :disabled="!search.query">
         <img src='../assets/search.png' class='form-input'/>
@@ -27,9 +27,6 @@ export default {
     return {
       search: {
         query: '',
-      },
-      searchBtn: {
-        disabled: true,
       },
     }
   },
@@ -78,7 +75,9 @@ export default {
   }
   .form-input {
     height: 35px;
-    /* margin: auto; */
+  }
+  #text-input {
+    width: 200px;
   }
   @media (max-width: 768px) {
     .header {
