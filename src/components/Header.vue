@@ -13,7 +13,9 @@
         class='form-input'
         v-model='search.query'
       />
-      <button class='form-input'>Search</button>
+      <button class='form-input' :disabled="this.search.query.length >= 1 ? disabled : ''">
+        <img src='../assets/search.png' class='form-input'/>
+      </button>
     </form>
   </div>
 </template>
@@ -31,6 +33,7 @@ export default {
   methods: {
     handleSubmit() {
       this.$emit('search:query', this.search.query)
+      this.search.query = '';
     }
   }
 }
@@ -45,20 +48,26 @@ export default {
     box-shadow: 2px 2px 10px;
     position: fixed;
     top: 0;
+    height: 75px;
     width: 100%
   }
   h1 {
     text-align: center;
     grid-column-start: 2;
     grid-column-end: 3;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin: auto;
   }
   form {
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     grid-column-start: 3;
     grid-column-end: 4;
   }
   .form-input {
     height: 35px;
+    margin: auto;
   }
 </style>
