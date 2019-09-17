@@ -1,14 +1,21 @@
 <template>
   <div id="app">
-
+    <Photos />
   </div>
 </template>
 
 <script>
+import Photos from './components/Photos'
+
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Photos
+  },
+  data() {
+    return {
+      
+    }
   }
 }
 </script>
