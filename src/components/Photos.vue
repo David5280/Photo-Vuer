@@ -1,7 +1,7 @@
 <template>
   <div class="photos-container">
     <div 
-      v-bind:key='photo.id' 
+      :key='photo.id' 
       v-for='photo in photos'
     >
       <PhotoItem v-bind:photo='photo'/>
@@ -26,5 +26,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 100px;
   }
 </style>

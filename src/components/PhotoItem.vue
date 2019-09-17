@@ -16,13 +16,18 @@ export default {
 </script>
 
 <style scoped>
-
   .single-image {
   height: 500px;
-  margin: 10px;
+  margin: 25px;
   object-fit: cover;
-  width: 300px;
+  max-width: 650px;
   box-shadow: 1px 1px 10px;
+  }
+
+  @media (max-width: 700px) {
+    .single-image {
+      width: 80%;
+    }
   }
 
 </style>

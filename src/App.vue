@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header @search:query='searchPhotos'/>
     <Photos v-bind:photos="photos" />
     
   </div>
@@ -24,11 +24,19 @@ export default {
     }
   },
   mounted() {
-  fetch(`https://api.unsplash.com/photos/?client_id=${apiKey}`)
-  .then(res => res.json())
-  .then(data => (this.photos = data))
-  .catch(err => err)
-  }
+    fetch(`https://api.unsplash.com/photos/?per_page=24&client_id=${apiKey}`)
+    .then(res => res.json())
+    .then(data => (this.photos = data))
+    .catch(err => err)
+  },
+  methods: {
+    searchPhotos(query) {
+      fetch(`https://api.unsplash.com/search/photos?page=1&per_page=24&query=${query}&client_id=${apiKey}`)
+      .then(res => res.json())
+      .then(data => (this.photos = data.results))
+      .catch(err => err)
+    }
+  },
 }
 </script>
 
@@ -40,7 +48,7 @@ export default {
   }
 
   body {
-    font-family: Arial, Helvetica, sans-seriff;
+    font-family: 'Apple Chancery', Helvetica, sans-seriff;
     line-height: 1.4;
     background: #ccc;
   }
