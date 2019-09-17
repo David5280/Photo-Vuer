@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-for="photo in photos">
-      {{ photo }}
+    <div v-bind:key="photo.id" v-for="photo in photos">
+      {{ photo.urls.full }}
     </div>
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 export default {
   name: "Photos",
-  props: [photoData]
+  props: ["photos"]
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Photos v-bind:photos="photoData"/>
+    <Photos v-bind:photos="photos"/>
     
   </div>
 </template>
@@ -17,13 +17,13 @@ export default {
   },
   data() {
     return {
-      photoData: null
+      photos: null
     }
   },
   mounted() {
   fetch(`https://api.unsplash.com/photos/?client_id=${apiKey}`)
   .then(res => res.json())
-  .then(data => (this.photoData = data))
+  .then(data => (this.photos = data))
   .catch(err => err)
   }
 }
