@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log('handleSubmit')
+      this.$emit('search:query', this.search.query)
     }
   }
 }
