@@ -50,7 +50,7 @@ export default {
 <style scoped>
   .header {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 25% 50% 25%;
     border-bottom: 2px solid black;
     background: rgb(134, 134, 134);
     box-shadow: 2px 2px 10px;
@@ -88,7 +88,7 @@ export default {
       align-items: center;
     }
     h1 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       margin: 0;
     }
     form {
