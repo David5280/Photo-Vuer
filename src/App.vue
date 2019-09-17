@@ -24,14 +24,14 @@ export default {
     }
   },
   mounted() {
-    fetch(`https://api.unsplash.com/photos/?client_id=${apiKey}`)
+    fetch(`https://api.unsplash.com/photos/?per_page=12&client_id=${apiKey}`)
     .then(res => res.json())
     .then(data => (this.photos = data))
     .catch(err => err)
   },
   methods: {
     searchPhotos(query) {
-      fetch(`https://api.unsplash.com/search/photos?page=1&query=${query}&client_id=${apiKey}`)
+      fetch(`https://api.unsplash.com/search/photos?page=1&per_page=12&query=${query}&client_id=${apiKey}`)
       .then(res => res.json())
       .then(data => (this.photos = data.results))
       .catch(err => err)

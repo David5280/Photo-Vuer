@@ -41,6 +41,8 @@ export default {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     border-bottom: 2px solid black;
+    background: rgb(134, 134, 134);
+    box-shadow: 2px 2px 10px;
   }
   h1 {
     text-align: center;
