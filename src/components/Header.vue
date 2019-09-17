@@ -60,7 +60,7 @@ export default {
     text-align: center;
     grid-column-start: 2;
     grid-column-end: 3;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin: auto;
   }
   form {
