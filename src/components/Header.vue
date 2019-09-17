@@ -4,7 +4,6 @@
       PHOTO-VUER
     </h1>
     <form 
-      class='search-box'
       @submit.prevent='handleSubmit'
     >
       <input 
@@ -59,15 +58,36 @@ export default {
     margin: auto;
   }
   form {
-    margin-right: auto;
+    margin:  auto auto auto 0px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     grid-column-start: 3;
     grid-column-end: 4;
+    width: 100%;
+    height: fit-content;
   }
   .form-input {
     height: 35px;
-    margin: auto;
+    /* margin: auto; */
+  }
+  @media (max-width: 768px) {
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    form {
+      width: 175px;
+      margin: 0;
+    }
+    .form-input {
+      height: 25px;
+    }
   }
 </style>
