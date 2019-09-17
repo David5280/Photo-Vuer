@@ -43,6 +43,9 @@ export default {
     border-bottom: 2px solid black;
     background: rgb(134, 134, 134);
     box-shadow: 2px 2px 10px;
+    position: fixed;
+    top: 0;
+    width: 100%
   }
   h1 {
     text-align: center;
