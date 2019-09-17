@@ -1,6 +1,10 @@
 <template>
   <div class="photo-item">
-    <img :src="photo.urls.regular" /> 
+    <img 
+      :src="photo.urls.regular" 
+      :alt="photo.alt_description"
+      class='single-image'
+    /> 
   </div>
 </template>
 
@@ -12,9 +16,11 @@ export default {
 </script>
 
 <style scoped>
-  .photo-item {
-    background: #f4f4f4;
-    padding: 10px;
-    border-bottom: 1px #ccc solid;
+
+  .single-image {
+  width: 350px;
+  height: 600px;
+  object-fit: cover;
   }
+  
 </style>

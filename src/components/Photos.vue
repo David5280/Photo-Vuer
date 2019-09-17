@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <div v-bind:key="photo.id" v-for="photo in photos">
+  <div class="photos-container">
+    <div 
+      v-bind:key="photo.id" 
+      v-for="photo in photos"
+    >
       <PhotoItem v-bind:photo="photo"/>
     </div>
   </div>
@@ -19,5 +22,9 @@ export default {
 </script>
 
 <style scoped>
-
+  .photos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 </style>
