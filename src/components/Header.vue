@@ -59,7 +59,7 @@ export default {
     margin: auto;
   }
   form {
-    margin: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
