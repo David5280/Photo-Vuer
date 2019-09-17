@@ -1,10 +1,10 @@
 <template>
   <div class="photos-container">
     <div 
-      v-bind:key="photo.id" 
-      v-for="photo in photos"
+      v-bind:key='photo.id' 
+      v-for='photo in photos'
     >
-      <PhotoItem v-bind:photo="photo"/>
+      <PhotoItem v-bind:photo='photo'/>
     </div>
   </div>
 </template>
@@ -13,11 +13,11 @@
 import PhotoItem from './PhotoItem';
 
 export default {
-  name: "Photos",
+  name: 'Photos',
   components: {
     PhotoItem,
   },
-  props: ["photos"]
+  props: ['photos']
 }
 </script>
 

@@ -1,19 +1,22 @@
 <template>
   <div id="app">
+    <Header />
     <Photos v-bind:photos="photos" />
     
   </div>
 </template>
 
 <script>
-import { getPhotos } from './Utils/ApiCalls/ApiCalls'
-import { apiKey } from './Utils/ApiCalls/apiKey'
-import Photos from './components/Photos'
+import { getPhotos } from './Utils/ApiCalls/ApiCalls';
+import { apiKey } from './Utils/ApiCalls/apiKey';
+import Header from './components/Header';
+import Photos from './components/Photos';
 
 export default {
   name: 'app',
   components: {
-    Photos
+    Photos,
+    Header
   },
   data() {
     return {
@@ -39,5 +42,6 @@ export default {
   body {
     font-family: Arial, Helvetica, sans-seriff;
     line-height: 1.4;
+    background: #ccc;
   }
 </style>
