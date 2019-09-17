@@ -1,12 +1,15 @@
 <template>
   <div>
-    <h1>Photos</h1>
+    <div v-for="photo in photos">
+      {{ photo }}
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Photos"
+  name: "Photos",
+  props: [photoData]
 }
 </script>
 
