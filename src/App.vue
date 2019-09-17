@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Photos v-bind:photos="photos"/>
+    <Photos v-bind:photos="photos" />
     
   </div>
 </template>

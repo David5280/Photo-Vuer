@@ -1,12 +1,13 @@
 <template>
-  <div>
-    <p>Photo Item</p>
+  <div class="photo-item">
+    <img :src="photo.urls.regular" /> 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PhotoItem'
+  name: "PhotoItem",
+  props: ["photo"]
 }
 </script>
 
