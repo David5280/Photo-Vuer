@@ -48,7 +48,7 @@ export default {
   }
 
   body {
-    font-family: Arial, Helvetica, sans-seriff;
+    font-family: 'Apple Chancery', Helvetica, sans-seriff;
     line-height: 1.4;
     background: #ccc;
   }
