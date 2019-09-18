@@ -30,8 +30,9 @@ export default {
   }
   .photo-wrapper {
     width: 100%;
+    margin-bottom: 15px;
   }
-  @media (max-width: 1400px) {
+  @media (min-width: 1600px) {
     .photos-container {
       column-count: 4;
     }

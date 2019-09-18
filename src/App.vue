@@ -24,14 +24,14 @@ export default {
     }
   },
   mounted() {
-    fetch(`https://api.unsplash.com/photos/?per_page=24&client_id=${API_KEY}`)
+    fetch(`https://api.unsplash.com/photos/?per_page=48&client_id=${API_KEY}`)
     .then(res => res.json())
     .then(data => (this.photos = data))
     .catch(err => err)
   },
   methods: {
     searchPhotos(query) {
-      fetch(`https://api.unsplash.com/search/photos?page=1&per_page=24&query=${query}&client_id=${API_KEY}`)
+      fetch(`https://api.unsplash.com/search/photos?page=1&per_page=48&query=${query}&client_id=${API_KEY}`)
       .then(res => res.json())
       .then(data => (this.photos = data.results))
       .catch(err => err)
@@ -50,6 +50,7 @@ export default {
   body {
     font-family: 'Apple Chancery', Helvetica, sans-seriff;
     line-height: 1.4;
-    background: #ccc;
+    background: rgb(134, 134, 134);
+
   }
 </style>
