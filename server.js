@@ -1,7 +1,6 @@
 var express = require('express');
 var path = require('path');
 var serveStatic = require('serve-static');
-var app = require('./src/app.vue')
 
 app = express();
 app.use(serveStatic(__dirname + "/dist"));
