@@ -53,7 +53,7 @@ export default {
     display: grid;
     grid-template-columns: 25% 50% 25%;
     border-bottom: 2px solid black;
-    background: rgb(134, 134, 134);
+    background: #ccc;
     box-shadow: 2px 2px 10px;
     position: fixed;
     top: 0;
@@ -64,7 +64,7 @@ export default {
     text-align: center;
     grid-column-start: 2;
     grid-column-end: 3;
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: auto;
   }
   form {
@@ -82,11 +82,24 @@ export default {
   }
   #text-input {
     width: 200px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  #search-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #FFF;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
   }
   #search-btn:hover {
     cursor: pointer;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 700px) {
     .header {
       display: flex;
       flex-direction: column;
