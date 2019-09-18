@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { getPhotos } from './Utils/ApiCalls/ApiCalls';
 import Header from './components/Header';
 import Photos from './components/Photos';
 
