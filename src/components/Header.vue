@@ -13,7 +13,11 @@
         id='text-input'
         v-model='search.query'
       />
-      <button class='form-input' :disabled="!search.query">
+      <button 
+        class='form-input' 
+        id='search-btn'
+        :disabled="!search.query"
+      >
         <img src='../assets/search.png' class='form-input'/>
       </button>
     </form>
@@ -78,6 +82,9 @@ export default {
   }
   #text-input {
     width: 200px;
+  }
+  #search-btn:hover {
+    cursor: pointer;
   }
   @media (max-width: 768px) {
     .header {
