@@ -20,7 +20,7 @@ export default {
   height: 500px;
   margin: 25px;
   object-fit: cover;
-  max-width: 650px;
+  max-width: 600px;
   box-shadow: 1px 1px 10px;
   }
 
