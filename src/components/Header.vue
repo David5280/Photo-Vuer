@@ -64,7 +64,7 @@ export default {
     text-align: center;
     grid-column-start: 2;
     grid-column-end: 3;
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: auto;
   }
   form {
@@ -86,7 +86,7 @@ export default {
   #search-btn:hover {
     cursor: pointer;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 700px) {
     .header {
       display: flex;
       flex-direction: column;

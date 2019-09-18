@@ -1,6 +1,7 @@
 <template>
   <div class="photos-container">
-    <div 
+    <div
+      class="photo-wrapper"
       :key='photo.id' 
       v-for='photo in photos'
     >
@@ -23,9 +24,27 @@ export default {
 
 <style scoped>
   .photos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 100px;
+    margin-top: 90px;
+    padding: 25px;
+    column-count: 3;
   }
+  .photo-wrapper {
+    width: 100%;
+  }
+  @media (max-width: 1400px) {
+    .photos-container {
+      column-count: 4;
+    }
+  }
+  @media (max-width: 700px) {
+    .photos-container {
+      column-count: 2;
+    }
+  }
+  @media (max-width: 480px) {
+    .photos-container {
+      column-count: 1;
+    }
+  }
+
 </style>
