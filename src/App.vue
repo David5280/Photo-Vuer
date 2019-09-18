@@ -12,6 +12,8 @@ import { apiKey } from './Utils/ApiCalls/apiKey';
 import Header from './components/Header';
 import Photos from './components/Photos';
 
+const API_KEY = process.env.VUE_APP_API_KEY
+
 export default {
   name: 'app',
   components: {
