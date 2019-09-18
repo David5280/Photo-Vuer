@@ -25,7 +25,6 @@ export default {
     }
   },
   mounted() {
-    console.log(process.env.BASE_URL)
     fetch(`https://api.unsplash.com/photos/?per_page=24&client_id=${API_KEY}`)
     .then(res => res.json())
     .then(data => (this.photos = data))
